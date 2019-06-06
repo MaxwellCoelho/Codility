@@ -1,0 +1,19 @@
+function solution(A) {
+   let sequence = new Set(A.sort());
+
+   if (A.length == 1 && A[0] == 1) {
+      return 1;
+   }
+
+   if (A.length > sequence.size) {
+      return 0;
+   }
+
+   for (let n of sequence) {
+      if (n > 1 && !sequence.has(n - 1)) {
+         return 0;
+      }
+   }
+
+   return 1;
+}
