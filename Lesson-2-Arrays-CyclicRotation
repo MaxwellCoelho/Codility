@@ -1,0 +1,9 @@
+function solution(A, K) {
+   for (let i = 0; i < K; i++) {
+      let lastItem = A[A.length-1];
+      A.unshift(lastItem);
+      A.pop();
+   }
+
+   return A;
+}
