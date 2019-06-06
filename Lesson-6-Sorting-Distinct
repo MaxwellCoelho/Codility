@@ -1,4 +1,0 @@
-function solution(A) {
-    let mySet = new Set(A);
-    return mySet.size;
-}
