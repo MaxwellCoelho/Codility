@@ -29,3 +29,18 @@ Write an efficient algorithm for the following assumptions:
 Solution:
 */
 
+function solution(A) {
+   A.sort((a, b) => a - b);
+   if (A.length == 0 || A[0] == 2) {
+      return 1;
+   }
+
+   for (let n = 1; n < A.length; n++) {
+      if (A[n] != A[n - 1] + 1) {
+         return A[n - 1] + 1;
+      }
+   }
+
+   return A[A.length - 1] + 1;
+}
+
